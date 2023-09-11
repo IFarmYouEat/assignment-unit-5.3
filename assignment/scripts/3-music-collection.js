@@ -30,8 +30,31 @@ console.log(addToCollection(myCollection,'Wolfmother', 'Wolfmother', 2005));
 
 console.log(addToCollection(myCollection,'The Resistance', 'Muse', 2009 ));
 
+console.log(addToCollection(myCollection,'Led Zepplin III','Led Zepplin',1970))
 
+console.log(myCollection);
 
+function showCollection(collection){
+  for(let album of collection){
+    console.log(`${album.title} was created by ${album.artist} in ${album.yearPublished}`);
+  }
+}
+
+showCollection(myCollection);
+
+function findByArtist(collection, artist){
+  let searchResults = [];
+  for(let album of collection){
+    if(artist === album.artist){
+      searchResults.push(album)
+    }
+  }
+  return searchResults;
+}
+
+console.log(findByArtist(myCollection, 'Muse'));
+console.log(findByArtist(myCollection, 'Green Day'));
+console.log(findByArtist(myCollection, 'Led Zepplin'));
 
 
 

@@ -1,5 +1,23 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+let myCollection = [];
+
+function addToCollection(collection, title, artist, yearPublished){
+  let newRecord = {
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished
+  }
+  if(collection === myCollection){
+    myCollection.push(newRecord);
+  }else if(collection === primesCollection){
+    primesCollection.push(newRecord);
+  }else console.log('Error adding to collection')
+
+  return newRecord;
+};
+
+
 
 
 

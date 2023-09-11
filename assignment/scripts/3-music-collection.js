@@ -46,7 +46,7 @@ function findByArtist(collection, artist){
   let searchResults = [];
   for(let album of collection){
     if(artist === album.artist){
-      searchResults.push(album)
+      searchResults.push(album);
     }
   }
   return searchResults;
@@ -56,6 +56,22 @@ console.log(findByArtist(myCollection, 'Muse'));
 console.log(findByArtist(myCollection, 'Green Day'));
 console.log(findByArtist(myCollection, 'Led Zepplin'));
 
+function search(collection, artist, year){
+  if(artist == null || year == null ){
+    return showCollection(collection);
+  }
+  
+  let searchResults = [];
+  for(let album of collection){
+    if(artist == album.artist && year == album.yearPublished){
+      searchResults.push(album);
+      }
+    }
+  return searchResults;
+}
+
+console.log(search(myCollection,'Led Zepplin', 1970))
+console.log(search(myCollection,'Muse'));
 
 
 

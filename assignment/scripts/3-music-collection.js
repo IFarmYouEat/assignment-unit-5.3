@@ -18,7 +18,17 @@ function addToCollection(collection, title, artist, yearPublished){
 };
 
 
+console.log(addToCollection(myCollection,'Toxicity', 'System of a Down', 2001));
 
+console.log(addToCollection(myCollection,'Songs for the Deaf', 'Queens of the Stone Age', 2002))
+
+console.log(addToCollection(myCollection,'BBC Live Sessions', 'Led Zepplin', 1997 ))
+
+console.log(addToCollection(myCollection,'Remember That You Will Die', 'Polyphia', 2022))
+
+console.log(addToCollection(myCollection,'Wolfmother', 'Wolfmother', 2005));
+
+console.log(addToCollection(myCollection,'The Resistance', 'Muse', 2009 ));
 
 
 
